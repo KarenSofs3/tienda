@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<htm lang="en">
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
                     <div class="boton">SEARCH</div>
                 </div>
                 <div class="espacio3"></div>
-                <div class="espacio4">
+                <div class="datos1-2">
                     <div class="datos1">
                         <img src="persona.png">
                         <p>YOUR ACCOUNT</p>
@@ -111,9 +111,9 @@
                     <img src="poster.png">
                     <div class="text_special">
                         <h1>Special Offer!</h1>
-                        <p ><span>Until December 29 only!</span></p>
+                        <h6><span>Until December 29 only!</span></h6>
                         <h2>Save up to 30%</h2>
-                        <h6>on cooking utensils</h6>
+                        <h5>on cooking utensils</h5>
                         <button>Shop Now!</button>
                     </div>
                 </div>
@@ -506,7 +506,7 @@
     .dad {
         display: grid;
         grid-template-columns: 1fr;
-
+        overflow: hidden
     }
 
     body {
@@ -526,14 +526,15 @@
         background-color: white;
         margin-left: 15%;
         margin-right: 15%;
+        overflow: hidden;
     }
 
     .categorias {
         margin: 0%;
         font-weight: bold;
         font-family: 'Roboto Condensed', sans-serif;
-        display: grid;
-        height: 5px;
+        display: flex;
+        flex-direction: column;
     }
 
     .categories {
@@ -672,7 +673,7 @@
         border-top: 1px solid grey;
         padding: 10px 0 10px 7px;
         background: #f9f9f9;
-        
+
     }
 
     .precios {
@@ -728,13 +729,12 @@
 
     .text_special {
         width: 100%;
-        transform: translate(0%, -155%);
+        transform: translate(0%, -95%);
         padding: 10px;
         font-size: 12px;
         text-align: center;
-        z-index: 1;
         height: 580px;
-        position: relative;
+        position: absolute;
         top: 540px;
     }
 
@@ -749,14 +749,17 @@
         margin: 0;
     }
 
-    .text_special p span {
+    .text_special h6 span {
         padding: 0;
         font-size: 12px;
-        margin: 10px;
+        margin: 0px;
         color: grey;
-        position: relative;
-        top: -5px;
         font-weight: normal;
+    }
+
+    .text_special h6 {
+        margin: 0;
+        padding: 0;
     }
 
     .text_special h2 {
@@ -767,17 +770,13 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
-        position: relative;
-        top: -20px;
     }
 
-    .text_special h6 {
+    .text_special h5 {
         margin: 0;
         padding: 0;
         font-size: 16px;
         color: grey;
-        position: relative;
-        top: -19px;
     }
 
     .text_special button {
@@ -788,7 +787,7 @@
         font-size: 16px;
         border-radius: 5px;
         cursor: pointer;
-        margin-top: 140px;
+        margin-top: 65%;
         font-weight: bold;
 
     }
@@ -1069,15 +1068,15 @@
         color: #333;
     }
 
-    .follow{
+    .follow {
         margin-bottom: 0px;
     }
 
     .follow p span {
         font-size: 16px;
         font-weight: bold;
-        color: #333;  
-        margin-bottom: 0px;  
+        color: #333;
+        margin-bottom: 0px;
     }
 
     .face {
@@ -1097,36 +1096,451 @@
         right: -2px;
     }
 
-    .twi{
+    .twi {
         display: grid;
         grid-template-columns: 0.1fr 1fr;
     }
-    .twi p{
-        margin: 0;
-    }
-    .twi img{
-        width: 20px;
-        height: 20px; 
-        position: relative;
-        top: -5px;
-        right: -2px;
-    }
 
-    .rss{
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-    }
-    .rss p{
+    .twi p {
         margin: 0;
     }
 
-    .rss img{
+    .twi img {
         width: 20px;
         height: 20px;
         position: relative;
         top: -5px;
         right: -2px;
     }
+
+    .rss {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+    }
+
+    .rss p {
+        margin: 0;
+    }
+
+    .rss img {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: -5px;
+        right: -2px;
+    }
+
+    @media(max-width: 1500px) {
+        .text_special h1 {
+            font-size: 30px;
+        }
+
+        .text_special h2 {
+            font-size: 20px;
+        }
+
+        .text_special button {
+            margin-top: 80%;
+        }
+    }
+
+    @media(max-width: 1390px) {
+
+        .cuadros {
+            width: 180px;
+        }
+
+        .text_special h1 {
+            font-size: 25px;
+        }
+
+        .text_special h2 {
+            font-size: 18px;
+        }
+
+        .special_offer h5 {
+            font-size: 14px;
+        }
+
+        .p {
+            font-size: 14px;
+        }
+
+        .text_special h1 {
+            font-size: 32px;
+        }
+
+        .productos2 {
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        .cuadros2 {
+            width: auto;
+        }
+    }
+
+    @media(max-width: 1220px) {
+        .todo {
+            margin-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 15px;
+            margin-left: 10%;
+            margin-right: 10%;
+            overflow: hidden;
+        }
+
+        .cuadros {
+            width: 250px;
+
+        }
+
+        .productos {
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        .text_special h1 {
+            font-size: 40px;
+        }
+
+        .text_special h2 {
+            font-size: 25px;
+        }
+
+        .special_offer h5 {
+            font-size: 14px;
+        }
+
+        .p {
+            font-size: 12px;
+        }
+
+        .text_special button {
+            margin-top: 90%;
+        }
+
+        .pie {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+
+    @media(max-width: 1090px) {
+        .text_special h1 {
+            font-size: 30px;
+        }
+
+        .text_special button {
+            margin-top: 70%
+        }
+    }
+
+    @media(max-width: 1000px) {
+        .todo {
+            margin-left: 5%;
+            margin-right: 5%;
+            overflow: hidden;
+        }
+
+
+        .pie {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    @media(max-width: 880px) {
+        .imagen {
+            padding-left: 0px;
+        }
+
+        .img-ollas {
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        .cuadros {
+            width: 220px;
+        }
+
+        .text_special h1 {
+            font-size: 30px;
+        }
+
+        .text_special h2 {
+            font-size: 20px;
+        }
+
+        .text_special button {
+            margin-top: 80%;
+        }
+
+        .cuadros2 {
+            width: auto;
+        }
+
+        .productos3 {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .information{
+            width: 280px;
+        }
+    }
+
+    @media(max-width: 830px) {
+        .todo {
+            padding: 2%;
+            margin-left: 2%;
+            margin-right: 2%;
+            overflow: hidden;
+        }
+
+        .pie {
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .buscador input {
+            width: 150px;
+        }
+    }
+
+    @media(max-width:800px){
+        .productos{
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .cuadros{
+            width: 360px;
+        }
+
+        .cuadros img{
+            height: 200px;
+            width: auto;
+        }
+
+        .text img{
+            width: 20px;
+        height: 20px;
+        margin-top: 8px;
+        margin-right: 5px;
+        opacity: 0.5;
+        }
+    }
+
+    @media(max-width: 720px){
+        .pestañas {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size: 10px;
+        }
+
+        .espacio1 {
+            display: none;
+        }
+
+        .espacio2 {
+            display: none;
+        }
+
+        .espacio3 {
+            display: none;
+        }
+
+        .encabezado {
+            display: grid;
+            grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
+            padding: 10px 0;
+        }
+
+        .carrito img {
+            width: 40px;
+            height: 40px;
+            margin: 5px 5px 5px 10px;
+        }
+
+        .carrito p {
+            font-size: 16px;
+            padding: 0 20px 0px 10px;
+        }
+
+        .espacio4{
+            display: none;
+        }
+
+        .buscador input {
+            width: 120px;
+            padding: 2px 5px;
+            font-size: 10px;
+        }
+
+        .boton {
+            font-size: 8px;
+            padding: 1px 5px;
+            margin-left: -4px;
+        }
+
+        .text_special h1 {
+            font-size: 25px;
+        }
+
+        .text_special h2 {
+            font-size: 18px;
+        }
+
+        .text_special button {
+            margin-top: 90%;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+
+        .p2 p{
+            position: relative;
+            top: -6px
+        }
+
+        .information {
+            width: 200px;
+        }
+    }
+
+    @media(max-width: 670px){
+        .todo {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto; 
+            gap: 20px;
+            overflow: hidden;
+        }
+        
+        .cuadros{
+            width: 500px;
+        }
+
+        .cuadros img{
+            height: 280px;
+            width: auto;
+        }
+
+        .text img{
+            width: 30px;
+        height: 30px;
+        margin-top: 8px;
+        margin-right: 5px;
+        opacity: 0.5;
+        }
+
+        .text p{
+            font-size: 20px;
+        }
+
+        .special_offer{
+            width: 40%;
+            height: auto;
+            position: absolute;
+            top: 630px;
+            right: 34px;
+        }
+
+        .special_offer h1{
+            font-size: 40px;
+        }
+
+        .special_offer h2{
+            font-size: 30px;
+        }
+        
+        .cuadro{
+            width: 45%;
+            height: auto;
+        }
+
+        .pie_pagina {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto; 
+            gap: 20px;
+
+        }
+
+        .follow{
+            margin-bottom: 20px;
+            padding-left: 78px;
+        }
+        
+        .information, .categoriees, .cookware_pie{
+            text-align: center;
+        }
+
+        .cookware_pie{
+            padding-right: 0px;
+            margin-bottom: 20px;
+        }
+
+        .info p{
+            padding-left: 50px;
+        }
+    }
+
+    @media(max-width: 587px){
+        .special_offer{
+            position: absolute;
+            top: 630px;
+            right: 10px;
+            left: 350px;
+        }
+
+        .special_offer h1{
+            font-size: 35px;
+        }
+
+        .special_offer h2{
+            font-size: 25px;
+        }
+    }
+/* 
+    @media(max-width: 520px){
+        .special_offer{
+            position: absolute;
+            top: 630px;
+
+            left: 350px;
+        }
+
+        .special_offer h1{
+            font-size: 30px;
+        }
+
+        .special_offer h2{
+            font-size: 20px;
+        }
+    }
+
+    @media(max-width: 520px){
+        .special_offer{
+            width: 60%;
+            height: auto;
+            position: absolute;
+            top: 630px;
+            right: 10px;
+            left: 350px;
+        }
+
+        .special_offer h1{
+            font-size: 35px;
+        }
+
+        .special_offer h2{
+            font-size: 25px;
+        } */
+    }
+
+
 </style>
 
-</html>
+</htm
